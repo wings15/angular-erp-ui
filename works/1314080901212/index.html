@@ -82,9 +82,9 @@
     </nav>
     
    <div class="form-group">
-            <label for="ManifestNum"  class="col-md-1 control-label">订单编码：</label>
+            <label for="ID"  class="col-md-1 control-label">订单编码：</label>
             <div class="col-md-2">
-                <select id="ManifestNum" class="form-control">
+                <select id="ID" class="form-control">
                     <option>001</option>
                     <option>002</option>
                     <option>003</option>
@@ -93,7 +93,7 @@
             </div>
             
             
-      <label  for="Wearhouse"  class="col-md-1 control-label">仓库：</label>
+      <label  for=" Storage"  class="col-md-1 control-label">仓库：</label>
    <select> 
     <option value="001" >001</option>
     <option value="002">002</option>
@@ -103,7 +103,7 @@
     <option value="006">006</option>
    </select>
    
-    <label  for="Handler"  class="col-md-1 control-label">经手人：</label>
+    <label  for="Hand"  class="col-md-1 control-label">经手人：</label>
    <select> 
     <option value="礼品盒" >礼品盒</option>
     <option value="按时">按时</option>
@@ -113,24 +113,23 @@
     <option value="泽拉图">泽拉图</option>
    </select>
    
-    <labelfor="HandlingData"  class="col-md-1 control-label">经办日期：</label>
+    <label for=" Handing date"  class="col-md-1 control-label">经办日期：</label>
     <div class="col-md-2">
--    <input type="date" name="Handing date" id="Handing date" value=""/>
+-    <input type="date" name=" Handing date" id=" Handing date" value=""/>
 
    </div>
    
-   <div>
-    <label for="State">状态：</label>
+   <div class="form-group">
+    <label for="State" class="col-md-1 control-label ">状态：</label>
     <input type="text" name="State" id="State" value=""/>
     
+    <div class="col-md-2">
     <label for="Remark">备注：</label>
-     <div class="col-md-7">
-                <input class="form-control disabled" id="Remark" type="text" />
-
+        <input class="form-control disabled" id="Remark" type="text" />
     </div>
     
 	
-  <div style="width: 1270px;height: 155px">
+  <div class="btn-group col-lg-push-1" style="width: 1270px;height: 155px">
     <input type="button" value="新建" name="submit"/>
     <input type="button" value="保存" name="submit"/>
     <input type="button" value="删除" name="submit"/>
@@ -139,15 +138,7 @@
     <input type="button" value="入库" name="submit"/>
   </div>
   
-  <div class="container">
-
-      <div class="starter-template">
-        
-        <p id="creat" ng-hide="isCreat" class="lead">成功创建.</p>
-		 <p id="save" ng-hide="isSave" class="lead">成功保存.</p>
-      </div>
-	</div>
-
+  
 <div class="container">	
 <DIV style="position:relative; top:0px; left:0px; width:80px; height:120px;  overflow: hidden">
 <SCRIPT language=javascript>
