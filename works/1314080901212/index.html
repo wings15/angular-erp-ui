@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html ng-app="orderModule">
  <head lang="en">
   <head>
@@ -22,6 +22,29 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]--> 
+    
+   <style>
+      body {
+        padding-top: 50px;
+      }
+      .starter-template {
+        padding: 40px 15px;
+        text-align: center;
+      }
+
+    </style>
+    
+    <div class="container">
+      <div class="starter-template">
+        <h1>仓库的入库表单创建</h1>
+        <p style="background-color:#99bce8;color:blue;font-weight:bold">单据信息</p>
+      </div>
+    </div>
+         
+    
+         
+    </div><!-- /.container -->
+    
     <script>
     function Crate Product Storage ($scope) {
         var someData = {
@@ -58,12 +81,19 @@
       </div>
     </nav>
     
-    <div margin:0px;width:614px;right:auto;left:0px;top:0px;height:154px;>
-    <p style="background-color:#99bce8;color:blue;font-weight:bold">单据信息</p>
-    <label for="number">供应商：</label>
-    <input type="text" name="number" id="number" value=""/>
-    
-    <label for="sort">仓库：</label>
+   <div class="form-group">
+            <label for="ManifestNum"  class="col-md-1 control-label">订单编码：</label>
+            <div class="col-md-2">
+                <select id="ManifestNum" class="form-control">
+                    <option>001</option>
+                    <option>002</option>
+                    <option>003</option>
+                    <option>004</option>
+                </select>
+            </div>
+            
+            
+      <label  for="Wearhouse"  class="col-md-1 control-label">仓库：</label>
    <select> 
     <option value="001" >001</option>
     <option value="002">002</option>
@@ -73,7 +103,7 @@
     <option value="006">006</option>
    </select>
    
-    <label for="Hand">经手人：</label>
+    <label  for="Handler"  class="col-md-1 control-label">经手人：</label>
    <select> 
     <option value="礼品盒" >礼品盒</option>
     <option value="按时">按时</option>
@@ -83,25 +113,42 @@
     <option value="泽拉图">泽拉图</option>
    </select>
    
-    <label for="Handing date">经办日期：</label>
--    <input type="text" name="Handing date" id="Handing date" value=""/>
+    <labelfor="HandlingData"  class="col-md-1 control-label">经办日期：</label>
+    <div class="col-md-2">
+-    <input type="date" name="Handing date" id="Handing date" value=""/>
 
    </div>
    
    <div>
     <label for="State">状态：</label>
     <input type="text" name="State" id="State" value=""/>
+    
     <label for="Remark">备注：</label>
-    <input type="text" name="Remark" id="Remark" value=""/>
-   
+     <div class="col-md-7">
+                <input class="form-control disabled" id="Remark" type="text" />
+
     </div>
     
 	
   <div style="width: 1270px;height: 155px">
-    <input type="submit" value="+新建" name="submit"/>
-    <input type="submit" value="+保存" name="submit"/>
+    <input type="button" value="新建" name="submit"/>
+    <input type="button" value="保存" name="submit"/>
+    <input type="button" value="删除" name="submit"/>
+    <input type="button" value="确定" name="submit"/>
+    <input type="button" value="导出excel" name="submit"/>
+    <input type="button" value="入库" name="submit"/>
   </div>
   
+  <div class="container">
+
+      <div class="starter-template">
+        
+        <p id="creat" ng-hide="isCreat" class="lead">成功创建.</p>
+		 <p id="save" ng-hide="isSave" class="lead">成功保存.</p>
+      </div>
+	</div>
+
+<div class="container">	
 <DIV style="position:relative; top:0px; left:0px; width:80px; height:120px;  overflow: hidden">
 <SCRIPT language=javascript>
 function Year_Month(){  
@@ -169,7 +216,7 @@ document.write('<font id="calendarClock4" style="color:#000000;font-family:Arial
 document.write('</td></tr></table>'); 
 document.write('</td></tr></table>'); 
 setInterval('refreshCalendarClock()',1000);
-      
+      	</div>
 </SCRIPT></DIV>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
