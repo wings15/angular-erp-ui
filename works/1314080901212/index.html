@@ -66,10 +66,12 @@
       </div>
     </div>
     
-    <label for="number">订单编码：</label>
+    <label for="number" class="col-md-1 control-label">订单编码：</label>
+     <div class="col-md-2">
     <input type="text" name="number" id="number" value=""/>
     
-    <label for="sort">仓库：</label>
+    <label for="sort"class="col-md-1 control-label">仓库：</label>
+      <div class="col-md-2">
    <select> 
     <option value="001" >001</option>
     <option value="002">002</option>
@@ -79,7 +81,8 @@
     <option value="006">006</option>
    </select>
    
-    <label for="Hand">经手人：</label>
+    <label for="Hand"class="col-md-1 control-label">经手人：</label>
+    <div class="col-md-2">
    <select> 
     <option value="礼品盒" >礼品盒</option>
     <option value="按时">按时</option>
@@ -89,7 +92,7 @@
     <option value="泽拉图">泽拉图</option>
    </select>
    
-   <label for="Handing date" class="col-md-1 control-label">经办日期：</label>
+    <label for="Handing date" class="col-md-1 control-label">经办日期：</label>
     <div class="col-md-2">
 -    <input type="date" name="Handing date" id="Handing date" value=""/>
 
@@ -100,22 +103,23 @@
     <label for="State" class="col-md-1 control-label ">状态：</label>
      <div class="col-md-2">
                 <input class="form-control " name="State" type="text" placeholder="只可编辑" disabled/>
-
-    
-     <div class="col-md-7>
-    <label for="Remark" class="col-md-1 control-label">备注：</label>
+       </div>
+       
+       <label for="Remark" class="col-md-1 control-label">备注：</label>
+        <div class="col-md-7>
         <input class="form-control disabled" id="Remark" type="text" />
-    
+       </div>
+       
     </div>
     
 	
-  <div style="width: 1270px;height: 155px">
-    <input type="submit" value="+新建" name="submit"/>
-    <input type="submit" value="+保存" name="submit"/>
-    <input type="button" value="删除" name="submit"/>
-    <input type="button" value="确定" name="submit"/>
-    <input type="button" value="导出excel" name="submit"/>
-    <input type="button" value="入库" name="submit"/>
+  <div class="btn-group col-lg-push-1">
+   <button type="submit" class="btn btn-default btn-sm" >新建</button>
+            <button type="button" class="btn btn-default btn-sm" disabled="disabled">保存</button>
+            <button type="button" class="btn btn-default btn-sm" disabled="disabled">删除</button>
+            <button type="button" class="btn btn-default btn-sm" disabled="disabled">确定</button>
+            <button type="button" class="btn btn-default btn-sm" disabled="disabled">导出excel</button>
+            <button type="button" class="btn btn-default btn-sm" disabled="disabled">出库</button>
   </div>
   
 </SCRIPT></DIV>
