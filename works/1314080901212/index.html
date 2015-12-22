@@ -23,29 +23,6 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]--> 
-    
-   <style>
-      body {
-        padding-top: 50px;
-      }
-      .starter-template {
-        padding: 40px 15px;
-        text-align: center;
-      }
-
-    </style>
-    
-    <div class="container">
-      <div class="starter-template">
-        <h1>仓库的入库表单创建</h1>
-        <p style="background-color:#99bce8;color:blue;font-weight:bold">单据信息</p>
-      </div>
-    </div>
-         
-    
-         
-    </div><!-- /.container -->
-    
     <script>
     function Crate Product Storage ($scope) {
         var someData = {
@@ -82,19 +59,17 @@
       </div>
     </nav>
     
-   <div class="form-group">
-            <label for="ID"  class="col-md-1 control-label">订单编码：</label>
-            <div class="col-md-2">
-                <select id="ID" class="form-control">
-                    <option>001</option>
-                    <option>002</option>
-                    <option>003</option>
-                    <option>004</option>
-                </select>
-            </div>
-            
-            
-      <label  for=" Storage"  class="col-md-1 control-label">仓库：</label>
+     <div class="container">
+      <div class="starter-template">
+        <h1>仓库的入库表单创建</h1>
+        <p style="background-color:#99bce8;color:blue;font-weight:bold">单据信息</p>
+      </div>
+    </div>
+    
+    <label for="number">订单编码：</label>
+    <input type="text" name="number" id="number" value=""/>
+    
+    <label for="sort">仓库：</label>
    <select> 
     <option value="001" >001</option>
     <option value="002">002</option>
@@ -104,7 +79,7 @@
     <option value="006">006</option>
    </select>
    
-    <label  for="Hand"  class="col-md-1 control-label">经手人：</label>
+    <label for="Hand">经手人：</label>
    <select> 
     <option value="礼品盒" >礼品盒</option>
     <option value="按时">按时</option>
@@ -114,101 +89,32 @@
     <option value="泽拉图">泽拉图</option>
    </select>
    
-    <label for=" Handing date"  class="col-md-1 control-label">经办日期：</label>
-    <div class="col-md-2">
--    <input type="date" name=" Handing date" id=" Handing date" value=""/>
+    <label for="Handing date">经办日期：</label>
+-    <input type="date" name="Handing date" id="Handing date" value=""/>
 
    </div>
    
-   <div class="form-group">
+   <div>
+    <div class="form-group">	
     <label for="State" class="col-md-1 control-label ">状态：</label>
     <input type="text" name="State" id="State" value=""/>
     
     <div class="col-md-2">
     <label for="Remark">备注：</label>
         <input class="form-control disabled" id="Remark" type="text" />
+    
     </div>
     
 	
-  <div class="btn-group col-lg-push-1" style="width: 1270px;height: 155px">
-    <input type="button" value="新建" name="submit"/>
-    <input type="button" value="保存" name="submit"/>
+  <div style="width: 1270px;height: 155px">
+    <input type="submit" value="+新建" name="submit"/>
+    <input type="submit" value="+保存" name="submit"/>
     <input type="button" value="删除" name="submit"/>
     <input type="button" value="确定" name="submit"/>
     <input type="button" value="导出excel" name="submit"/>
     <input type="button" value="入库" name="submit"/>
   </div>
   
-  
-<div class="container">	
-<DIV style="position:relative; top:0px; left:0px; width:80px; height:120px;  overflow: hidden">
-<SCRIPT language=javascript>
-function Year_Month(){  
-    var now = new Date();  
-    var yy = now.getFullYear();  
-    var mm = now.getMonth()+1;  
-    var cl = '<font color="#000000">';  
-    if (now.getDay() == 0) cl = '<font color="#000000">';  
-    if (now.getDay() == 6) cl = '<font color="#000000">';  
-    return(cl +  yy + '年' + mm + '月</font>');  
-}  
- 
-function Date_of_Today(){  
-    var now = new Date();  
-    var cl = '<font color="#000000">';  
-    if (now.getDay() == 0) cl = '<font color="#000000">';  
-    if (now.getDay() == 6) cl = '<font color="#000000">';  
-    return(cl +  now.getDate() + '<b>日</b></font>');  
-}  
- 
-function Day_of_Today(){  
-    var day = new Array();  
-    day[0] = "星期日";  
-    day[1] = "星期一";  
-    day[2] = "星期二";  
-    day[3] = "星期三";  
-    day[4] = "星期四";  
-    day[5] = "星期五";  
-    day[6] = "星期六";  
-    var now = new Date();  
-    var cl = '<font color="#000000">';  
-    if (now.getDay() == 0) cl = '<font color="#000000">';  
-    if (now.getDay() == 6) cl = '<font color="#000000">';  
-    return(cl +  day[now.getDay()] + '</font>');  
-}  
- 
-function CurentTime(){  
-    var now = new Date();  
-    var hh = now.getHours();  
-    var mm = now.getMinutes();  
-    var ss = now.getTime() % 60000;  
-    ss = (ss - (ss % 1000)) / 1000;  
-    var clock = hh+':';  
-    if (mm < 10) clock += '0';  
-    clock += mm+':';  
-    if (ss < 10) clock += '0';  
-    clock += ss;  
-    return(clock);  
-}  
- 
-function refreshCalendarClock(){  
-document.all.calendarClock1.innerHTML = Year_Month();  
-document.all.calendarClock2.innerHTML = Date_of_Today();  
-document.all.calendarClock3.innerHTML = Day_of_Today();  
-document.all.calendarClock4.innerHTML = CurentTime();  
-}  
-document.write('<table border="0" cellpadding="0" cellspacing="1" width="68" bgcolor="#000000" height="60">'); 
-document.write('<tr><td width="100%" height="100%" align="center">'); 
-document.write('<table border="0" cellpadding="0" cellspacing="0" width="100%" hight="100%" bgcolor="#f2f2f2" height="60">'); 
-document.write('<tr><td align="center" width="100%" height="100%">'); 
-document.write('<font id="calendarClock1" style="font-family:宋体;font-size:9pt"> </font><br>'); 
-document.write('<font id="calendarClock2" style="font-family:Arial;font-size:14pt;Line-Height=100%"> </font><br>'); 
-document.write('<font id="calendarClock3" style="font-family:宋体;font-size:9pt;Line-Height=100%"> </font><br>'); 
-document.write('<font id="calendarClock4" style="color:#000000;font-family:Arial;font-size:8pt;Line-Height=100%"><b> </b></font>'); 
-document.write('</td></tr></table>'); 
-document.write('</td></tr></table>'); 
-setInterval('refreshCalendarClock()',1000);
-      	</div>
 </SCRIPT></DIV>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
