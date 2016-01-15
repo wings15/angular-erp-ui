@@ -6,7 +6,7 @@ var documentsDetail =  {
             ID: 'AAA',
             Storage: '001',
             Hand: 'Amy',
-            Handing date: '2015-10-24',
+            Handingdate: '2015-10-24',
             State: 'finished',
             REmark:'good',
             
